@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Code Canvas</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Jua&display=swap");
+    </style>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-image: url("Images-web1/colorful-abstract-nebula-space-background.jpg");
+        background-repeat: none;
+        background-size: cover;
+      }
+      header {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        height: 15vh;
+        width: 100vw;
+        font-family: "jua";
+      }
+      .backimg {
+        height: 100vh;
+        width: 100vw;
+      }
+      .logo {
+        width: 45%;
+        mix-blend-mode: hard-light;
+      }
+      .boxlogo {
+        margin-right: auto;
+        margin-left: 2vw;
+      }
+      .nav-capsules {
+        color: aliceblue;
+        font-size: 40px;
+        text-shadow: 0 0 8px rgb(255, 255, 255); 
+        border-radius: 60px;
+        margin:40px;
+        padding: 20px;
+      }
+      main{
+        padding: 0;
+        margin: 0;
+      }
+      .main-flex{
+        display: flex;
+        height: 80vh;   
+        width: 100vw;
+        justify-content:flex-start;
+      }
+      .main-heading{
+        font-family: "jua";
+        color: antiquewhite;
+        font-size: 33px;
+        margin-left: 5vw;
+        padding: 20px;
+        text-shadow: 0 0 8px rgb(255, 255, 255); 
+        
+      }
+      .main-vid{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        margin-top: 0px;
+        flex: 1;
+      }
+      .vid{
+        z-index: 1;
+        object-fit: cover;
+        height:100%;
+        width:100%;
+        grid-row: 1/2;
+        grid-column: 1/2;
+        mask-image: radial-gradient(circle at center,
+        rgba(0, 0, 0, 1),     /* Fully opaque black (video fully visible) at center */
+        rgba(0, 0, 0, 1),    
+        rgba(0, 0, 0, 0.5),   
+        rgba(0, 0, 0, 0)     /* Fades to fully transparent black (video fully hidden) by 100% radius */
+    );
+      }
+      .Creative{
+        color: rgb(92, 92, 255);
+        font-size: 93px;
+        text-shadow: 0 0 8px rgb(92, 92, 255); 
+      }
+      .WebD{
+        color: rgba(255, 0, 251, 0.58);
+        font-size: 100px;
+        text-shadow: 0 0 8px #ff00ff; 
+      }
+      .vidb{
+        z-index: -1;
+        position: absolute;
+        object-fit: cover;
+        height:100%;
+        width:100%;
+        grid-row: 1/2;
+        grid-column: 1/2;
+        mask-image: radial-gradient(circle at center,
+        rgba(0, 0, 0, 1),     /* Fully opaque black (video fully visible) at center */
+        rgba(0, 0, 0, 1),    
+        rgba(0, 0, 0, 0.5),   
+        rgba(0, 0, 0, 0)     /* Fades to fully transparent black (video fully hidden) by 100% radius */
+    );
+      }
+    </style>
+  </head>
+  <body>
+    <video class="vidb" src="./Images-web1/comp.mp4" preload="auto" autoplay loop></video>
+    <header>
+      <span class="boxlogo"><img class="logo" src="./Images-web1/logo-web1.png" /></span>
+      <span class="nav-capsules">Home</span>
+      <span class="nav-capsules">Services</span>
+      <span class="nav-capsules">About Us</span>
+      <span class="nav-capsules">Contact Us</span>  
+    </header>
+    <main>
+        <div class="main-flex">
+        <div class="main-heading">
+        <h1>We make <span class="Creative">Creative</span></h1>
+        <h1 class="WebD">Web Designs</h1>
+        
+     </div>
+    </main>
+    <div class="container"></div>
+  </body>
+</html>
